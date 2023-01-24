@@ -33,13 +33,20 @@ Write a class MethodTester that contains a main method and three static helper m
 
 Once you know the algorithms work correctly, write another class named RuntimeAnalyzer that contains the same helper methods. Modify each helper method so that it returns the number of assignment statements that it performs rather than the maximum sum over all subarrays. Do this by adding a counter to each algorithm that starts at 0 and increments each time you do an assignment statement. You should decide what qualifies as an assignment statement. Be consistent across algorithms so you can compare the algorithms against each other.
 
+Or instead you could measure the time that your computer spends processing the algorithm using:
 ```java
 long startTime = System.currentTimeMillis( ); // record the starting time
  /* (run the algorithm) */
 long endTime = System.currentTimeMillis( ); // record the ending time
 long elapsed = endTime − startTime;
 ```
-
+If your computer is too fast use:
+```java
+long startTime = System.nanoTime(); // record the starting time
+ /* (run the algorithm) */
+long endTime = System.nanoTime(); // record the ending time
+long elapsed = endTime − startTime;
+```
 
 Write your main method for this class so it will run your 
 algorithms for randomly generated arrays of size 5, 10, 15, ..., up to 50. Each array should have random values between -10 and 99, inclusive, and you can have duplicates. 
